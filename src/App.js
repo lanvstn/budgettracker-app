@@ -22,13 +22,6 @@ const getLabelsFetch = () => new Promise((resolve) => {
   resolve(getLabels())
 })
 
-function AddButton(props) {
-  // This needed to be its own component to be able to use the history...
-  const history = useHistory();
-
-  return <Button variant="add" color="primary" onClick={() => { history.push("/new") }}>+</Button>
-}
-
 function App(props) {
   const [expenses, setExpenses] = useState({});
   const [cats, setCats] = useState({});

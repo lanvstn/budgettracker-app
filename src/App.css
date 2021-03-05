@@ -8,10 +8,16 @@
 }
 
 .btn-add {
-  background-color: var(--primary);
-  color: var(--light);
+  border-color: var(--primary);
+  border-width: 2px;
+  color: var(--primary);
   font-weight: bolder;
   font-size: large;
+}
+
+.btn-add:hover {
+  background-color: var(--primary);
+  color: var(--light);
 }
 
 .right {

@@ -5,6 +5,7 @@ import ExpenseTable from './ExpenseTable';
 import { getExpenses, getLabels, setExpense, createExpense, setLabels } from "./fakeapi";
 import MonthSelector from "./MonthSelector";
 import MonthlyTotals from './MonthlyTotals';
+import AddButton from "./AddButton";
 
 function MonthView(props) {
   const [expenses, setExpenses] = useState({});
@@ -37,6 +38,8 @@ function MonthView(props) {
     <hr />
     <Row>
       <Col>
+        <AddButton />
+        <br />
         <ExpenseTable expenses={expenses} cats={props.cats} />
       </Col>
     </Row>

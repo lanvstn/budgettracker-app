@@ -1,5 +1,6 @@
 import { Formik } from 'formik';
 import { Button, Form, Modal } from "react-bootstrap";
+import { CirclePicker } from 'react-color';
 import { useHistory } from "react-router-dom";
 import * as yup from 'yup';
 import Label from "./Label";
@@ -8,7 +9,7 @@ import "./LabelEditor.css";
 
 const schema = yup.object().shape({
   text: yup.string().required(),
-  color: yup.string().required().matches(/(#[0-9a-fA-F]{6})|(rgba\(([0-9]{1,3}, ?){3}((0?\.[0-9]{1,2})|(1))\))/)
+  color: yup.string().required()
 });
 
 
@@ -26,10 +27,8 @@ function LabelEditForm(props) {
     isNew = false;
   }
 
-  // alert(JSON.stringify(label));
-
   return <>
-    <Modal show={props.showEditor} onHide={null}>
+    <Modal show={props.showEditor} onHide={() => props.handleCloseEditor(false, label)}>
       <Formik
         initialValues={label}
         validationSchema={schema}
@@ -61,12 +60,9 @@ function LabelEditForm(props) {
               </Form.Group>
               <Form.Group controlId="editorColor">
                 <Form.Label>Color</Form.Label>
-                <Form.Control
-                  type="text"
-                  name="color"
-                  value={formik.values.color}
-                  onChange={formik.handleChange}
-                  isInvalid={!!formik.errors.color}
+                <CirclePicker
+                  color={formik.values.color}
+                  onChange={(e) => { formik.setFieldValue("color", e.hex); }}
                 />
               </Form.Group>
               {
