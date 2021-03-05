@@ -1,0 +1,51 @@
+:root {
+  --nav-inactive: rgba(255,255,255,.5);
+  --nav-active: rgba(255,255,255,.75);
+}
+
+.mainContainer {
+  padding-top: 4vh;
+}
+
+.btn-add {
+  background-color: var(--primary);
+  color: var(--light);
+  font-weight: bolder;
+  font-size: large;
+}
+
+.right {
+  float: right;
+}
+
+.left {
+  float: left;
+}
+
+.navActive {
+  font-weight: bolder;
+  color: var(--nav-active);
+}
+
+nav a {
+  color: var(--nav-inactive);
+}
+
+nav a:hover {
+  color: var(--nav-active);
+  text-decoration: none;
+}
+
+footer {
+  color: #555;
+  font-weight: light;
+  line-height: 40px;
+}
+
+footer .demoWarning {
+  background-color: hsl(40, 30%, 65%);
+  color: white;
+  padding: 5px 40px;
+  border-radius: 5px;
+  font-weight: bold;
+}

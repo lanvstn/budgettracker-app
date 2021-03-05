@@ -1,0 +1,13 @@
+.btn-add-transparent {
+  background-color: transparent;
+  color: var(--dark);
+  font-weight: bolder;
+  font-size: large;
+}
+
+.btn-add-transparent:hover {
+  background-color: rgba(163, 163, 163, 0.5);
+  color: var(--dark);
+  font-weight: bolder;
+  font-size: large;
+}

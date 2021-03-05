@@ -1,0 +1,12 @@
+.label {
+  color: var(--light);
+  padding: 3px 6px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: smaller;
+}
+
+.label.big {
+  font-size: medium;
+  padding: 6px 9px;
+}
