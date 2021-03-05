@@ -44,6 +44,7 @@ function LabelEditor(props) {
     />
 
     <h2>Labels</h2>
+    <p>You can edit labels here by clicking on them.</p>
     {
       Object.entries(props.cats).map(([cat, _]) => <>
         <Label
